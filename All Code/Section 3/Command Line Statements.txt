@@ -1,0 +1,5 @@
+cd \Desktop
+sudo apt install npm
+cd Code/'Section 3'
+npm install apollo-server graphql graphql-tools
+node index.js

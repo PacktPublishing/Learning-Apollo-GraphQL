@@ -1,0 +1,14 @@
+sudo apt install mysql-server
+
+$ sudo mysql -u root # I had to use "sudo" since is new installation
+
+mysql> USE mysql;
+mysql> UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+mysql> FLUSH PRIVILEGES;
+mysql> exit;
+
+mysql> CREATE USER 'local_admin'@'localhost' IDENTIFIED BY 'la';
+mysql> CREATE DATABASE lagql_demo;
+mysql> GRANT ALL PRIVILEGES ON lagql_demo . * TO 'local_admin'@'localhost';
+
+$ service mysql restart

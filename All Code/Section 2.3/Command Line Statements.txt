@@ -1,0 +1,8 @@
+cd \Desktop
+mkdir ourfirstapolloserver
+sudo apt install npm
+cd ourfirstapolloserver
+cp ../Code'Section 2.3'/index.js .
+npm init --yes
+npm install apollo-server graphql
+node index.js
